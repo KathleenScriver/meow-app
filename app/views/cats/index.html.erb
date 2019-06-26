@@ -1,0 +1,11 @@
+<%# Index page to show all cats names and breeds %>
+
+<h1>Here are all the cats!</h1>
+
+<ul>
+  <% @cats.each do |cat| %>
+    <li>Cat name: <%= link_to cat.name, cat_path(cat) %></li>
+    <li>Cat breed: <%= cat.breed %></li>
+    <br>
+  <% end %>
+</ul>
